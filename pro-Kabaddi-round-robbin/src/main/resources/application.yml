@@ -1,0 +1,6 @@
+server:
+  port: 1111
+
+spring:
+  application:
+    name: pro-kabaddi-round-robin

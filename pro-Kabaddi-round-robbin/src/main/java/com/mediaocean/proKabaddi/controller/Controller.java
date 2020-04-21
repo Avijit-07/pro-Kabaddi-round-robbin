@@ -18,12 +18,7 @@ public class Controller {
 
 	TeamDao teamDao= new TeamDaoImpl();
 	MatchScheduler matchScheduler= new MatchSchedularImpl();
-	
-	@GetMapping("/hello")
-	public String sayHello() {
-		return "Hi";
-	}
-	
+
 	@GetMapping("/allTeams")
 	public HashMap<Integer, Team> getAllTeams(){
 		return (HashMap<Integer, Team>) (teamDao.getAllTeams());
