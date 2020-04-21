@@ -1,25 +1,26 @@
-package com.mediaocean.proKabaddi.controller;
+package com.boot.examples.prokabaddi.api.controller;
+
+import com.boot.examples.prokabaddi.api.common.Team;
+import com.boot.examples.prokabaddi.api.common.dao.TeamDao;
+import com.boot.examples.prokabaddi.api.common.dao.impl.TeamDaoImpl;
+import com.boot.examples.prokabaddi.api.common.Match;
+import com.boot.examples.prokabaddi.api.schedule.MatchScheduler;
+import com.boot.examples.prokabaddi.api.schedule.impl.MatchSchedularImpl;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.mediaocean.proKabaddi.common.Match;
-import com.mediaocean.proKabaddi.common.Team;
-import com.mediaocean.proKabaddi.common.dao.TeamDao;
-import com.mediaocean.proKabaddi.common.dao.impl.TeamDaoImpl;
-import com.mediaocean.proKabaddi.controller.schedule.MatchScheduler;
-import com.mediaocean.proKabaddi.controller.schedule.impl.MatchSchedularImpl;
-
 @RestController
+@RequestMapping("/api/v1")
 public class Controller {
 
 	TeamDao teamDao= new TeamDaoImpl();
 	MatchScheduler matchScheduler= new MatchSchedularImpl();
 
-	@GetMapping("/allTeams")
+	@GetMapping("/teams")
 	public HashMap<Integer, Team> getAllTeams(){
 		return (HashMap<Integer, Team>) (teamDao.getAllTeams());
 	}

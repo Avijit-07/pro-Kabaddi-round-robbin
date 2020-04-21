@@ -8,11 +8,10 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mediaocean</groupId>
-	<artifactId>pro-Kabaddi-round-robbin</artifactId>
+	<groupId>com.boot.examples</groupId>
+	<artifactId>pro-kabaddi-round-robbin</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>pro-kabaddi-round-robbin</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -34,6 +33,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -41,11 +54,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.surefire</groupId>
-				<artifactId>surefire</artifactId>
-				<version>2.22.2</version>
 			</plugin>
 		</plugins>
 	</build>
